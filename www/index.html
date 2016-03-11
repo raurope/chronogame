@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+  </head>
+  <body ng-app="starter" ng-controller="ChronoController">
+
+    <ion-pane>
+      <ion-header-bar class="bar-balanced">
+        <div class="buttons">
+          <button class="button button-stable" ng-click="showAlert()">Rules</button>
+        </div>
+        <h1 class="title" style="text-align:center">ChronoGame</h1>
+        <div class="buttons">
+          <button class="button button-stable" ng-click="close()">Exit</button>
+        </div>
+      </ion-header-bar>
+      <ion-content>
+        <div class="center">
+          <div class="score">
+            Points: {{score}}
+          </div>
+          <div class="cb"></div>
+          <div class="target">
+            Your target is: {{target_value}}
+          </div>
+          <div class="chrono">
+              {{chrono_value_seconds}}:{{chrono_value_hundredth}}
+          </div>
+          <button class="button-start button button-balanced" ng-click="start()" ng-disabled="isStartDisabled">
+            Start
+          </button>
+          <button class="button-stop button button-assertive" ng-click="stop()" ng-disabled="isStopDisabled">
+            Stop
+          </button>
+        </div>
+      </ion-content>
+    </ion-pane>
+  </body>
+</html>

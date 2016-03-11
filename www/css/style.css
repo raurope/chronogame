@@ -1,0 +1,27 @@
+/* Empty. Add your own CSS if you like */
+.center {
+  text-align: center;
+}
+
+.cb {
+  clear: both;
+}
+
+.score {
+  float:right;
+  margin-right: 5%;
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.target {
+  margin-top:90px;
+  margin-bottom:10px;
+  text-align: center;
+  font-size: 17px;
+}
+
+.chrono {
+  font-size: 30px;
+  margin: 20px 0 20px 0;
+}
